@@ -1,0 +1,287 @@
+@font-face{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+@keyframes textright{
+	0%{
+        right: -600px;
+    }
+    50%{
+        right: -300px;
+        display: block;
+    }
+	100%{
+        right: 0;
+        display: block;
+	}
+}
+
+*{
+	box-sizing: border-box;	
+}
+
+html, body{
+	margin:0;
+    padding:0;
+}
+
+#check{
+    display: none;
+}
+
+#menu{
+    position: fixed;
+    right: 60px;
+    top: 45px;
+    z-index: 2;
+}
+
+body{
+    background: url("Back.jpg") fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+nav {
+    position: fixed;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    right: 0;
+    top: 0;
+    min-height: 100%;
+    width: 30%;
+    right: -600px;
+    transition-duration: 1s;
+}
+
+ul{
+    padding: 0;
+    list-style-type: none;
+    margin-top: 95px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+li{
+    width: 100%;
+    height: 45px;
+    padding-left: 35px;
+    margin-right: 70px;
+    font-size: 25px;
+    font-family: Open Sans;
+}
+
+.sub-menu {
+    display: none;
+    text-align: left;
+    width: calc(100%+35px);
+    margin-top: 11px;
+    margin-left: -35px;
+}
+
+.sub-menu li {
+    text-align: left;
+    padding-left: 65px;
+}
+
+#inscreva-se {
+    width: 250px;
+    height: 56px;
+    transition-duration: 0.5s;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: solid 3px;
+    border-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    font-size: 22px;
+}
+
+#index h1{
+    font-family: 'Maven Pro';
+    font-size: 60px;
+    margin-left: 5%;
+    color: white;
+    margin-top: 10%;
+    animation-name: textright;
+    animation-duration: 2s;
+}
+
+#logo{
+    width: 254px;
+}
+
+#conteudo{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.center {
+    display: block;
+    color: white;
+    font-family: 'Maven Pro';
+    text-align: center;
+    font-size: 52px;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.left {
+    text-align: left;
+}
+
+article.texto .nome{
+    text-align: center;
+    font-size: 37px;
+    margin: 0;
+}
+
+article.texto .comit{
+    text-align: center;
+    font-size: 26px;
+    margin: 0;
+}
+
+article.texto .funcao{
+    font-size: 18px;
+}
+
+article.texto img.perfil{
+    width: 225px;
+    margin-top: 3%;
+    border-radius: 50%;
+}
+
+article.texto img.comite{
+    width: 45%;
+    margin-top: 3%;
+}
+
+article.texto{
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: -5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    padding-bottom: 3%;
+}
+
+article.texto .titulo{
+    display: block;
+    color: white;
+    font-family: 'Maven Pro';
+    text-align: left;
+    font-size: 52px;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+
+article.texto h2{
+	font-size: 36px;
+}
+
+article.texto p{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+article.texto table{
+	border-collapse: collapse;
+	border-bottom: 1px solid black;
+	width: 75%;
+	margin-bottom: 2%;
+}
+
+article.texto table td{
+	padding: 15px;
+	font-size: 24px;
+	text-align: left;
+	background-color: rgb(192,192,192);
+	border-bottom: 1px solid black;
+}
+
+article.texto table th{
+	background-color: rgba(105, 105, 105, 0.8);
+	color: rgb(255, 255, 255);
+	font-family: 'Maven Pro';
+	font-size: 24px;
+	padding: 15px;
+	text-align: left;
+	border-bottom: 1px solid black;
+}
+
+article.texto table td:hover{
+	background-color: rgb(255, 255, 255);
+	transition: 0.2s ease;
+}
+
+article.texto img.mapa:hover{
+	margin: 2%;
+    width: 95%;
+    height: 95%;
+}
+
+.subM:hover .sub-menu{
+    display: block;
+}
+
+li:hover{
+    background-color: rgba(255,255,255,0.1);
+}
+
+.subM:hover {
+    height: auto;
+}
+
+#inscreva-se:hover {
+    color: rgba(0, 0, 0, 0.8);
+    background-color: rgb(255, 255, 255);
+}
+
+#check:checked ~nav{
+    right: 0;
+}
+
+.underline:hover{
+    border-bottom: 2px solid;
+    border-color: rgb(255, 255, 255);
+    transition-duration: .5s;
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        width: 100%;
+    }
+
+    #logo {
+        margin-top: 35%;
+    }
+
+    .center {
+        font-size: 46px;
+        margin-top: 10%;
+        margin-bottom: 5%;
+    }
+    
+    article.texto .nome{
+        font-size: 32px;
+    }
+    
+    article.texto .funcao{
+        font-size: 18px;
+    }
+    
+    article.texto img.perfil{
+        width: 150px;
+        margin-top: 3%;
+    }
+  }
